@@ -2,7 +2,7 @@
 """Publish only reviewed study HTML; never copy course source materials."""
 from pathlib import Path
 import argparse, html, re
-p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--mechanism-source',type=Path);args=p.parse_args()
 repo=Path(__file__).resolve().parents[1]
 CSS=":root{--ink:#263445;--muted:#71808d;--line:#dde4e9;--paper:#fff;--card:#fff;--purple:#506e84;--deep:#fff;--wash:#f2f6f8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'Helvetica Neue',Helvetica,Arial,'PingFang TC',sans-serif}header{background:#fff;color:var(--ink);border-bottom:1px solid var(--line);padding:18px 24px}header h1{font-size:23px;font-weight:500;margin:8px 0 2px}header p{color:var(--muted);font-size:13px;margin:0}nav{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}nav a{color:#53677c;text-decoration:none;min-height:28px}main{max-width:980px;margin:auto;padding:32px 24px 60px}h2{font-size:20px;font-weight:500;margin:0 0 20px}a{color:var(--purple);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #af99c6;outline-offset:4px}.rows{display:grid;gap:0}.row{padding:20px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px}.row h3{font-size:20px;font-weight:500;margin:0 0 3px}.row p{font-size:14px;color:var(--muted);margin:0}.links{display:flex;gap:18px;flex-wrap:wrap}.pending{color:var(--muted);font-size:13px}.eyebrow{font-size:12px;color:var(--muted);margin:24px 0 10px}@media(max-width:600px){header{padding:16px}main{padding:24px 16px}.row{align-items:flex-start;flex-direction:column;gap:10px}.row h3{font-size:19px}}"
 COLORS={'pharmacology':'#506e84','pathology':'#69758F'}
@@ -20,6 +20,7 @@ nav=link('../../../','Notes')+link('../../','Pharmacology')+link('../','115-1')+
 navcss='.site-nav{display:flex;gap:20px;flex-wrap:wrap;padding:12px 24px;border-bottom:1px solid #dde4e9;font:13px/1.6 Helvetica,Arial,sans-serif}.site-nav a{color:#506e84;text-decoration:none}.embed .site-nav{display:none}'
 for src in args.source.glob('*.html'):
  if src.name=='開始複習.html':continue
+ if args.mechanism_source and src.name[:2].isdigit() and '藥物速查' not in src.name and (args.mechanism_source/src.name).exists():src=args.mechanism_source/src.name
  text=src.read_text().replace('開始複習.html','index.html').replace('#71549a','#506e84').replace('#f6f3fa','#f2f6f8')
  text=text.replace('</style>',navcss+'</style>',1)
  text=text.replace('<body>','<body><nav class="site-nav">'+nav+'</nav>',1)

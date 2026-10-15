@@ -9,3 +9,5 @@
 舊 pharmacology/2/ 連結保留導向並保留查詢參數與錨點。
 
 同步：`python3 scripts/sync-pharmacology.py --source <第二版資料夾>`。
+
+機轉頁已統一英／中英獨立排版、藥名淡底色及響應寬度。發布時必須指定 `--mechanism-source` 為「英中雙版試作-20261015」，一般表格來源仍為「第二版」。

@@ -75,32 +75,593 @@ mount();
  function scan(){document.querySelectorAll('svg.map:not([data-polished])').forEach(polish);}
  scan();let pending=false;new MutationObserver(()=>{if(pending)return;pending=true;queueMicrotask(()=>{pending=false;scan()});}).observe(document.body,{childList:true,subtree:true});
 })();
-</script><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:12px 0;font-size:13px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}.zh-glossary>div{display:flex;justify-content:space-between;gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font:inherit;font-size:13px;font-weight:600;color:#506e84;background:white;border:0;border-bottom:2px solid #607d94;cursor:pointer;padding:6px 0;min-height:32px;margin:0 0 12px}.zh-toggle[aria-pressed="true"]{color:#36566f}</style><script data-bilingual>(()=>{
-const terms={"Parasite β-tubulin": "寄生蟲 β 微管蛋白", "Microtubule assembly": "微小管聚合", "Nutrient uptake / survival": "養分攝取／存活", "Benzimidazoles": "苯并咪唑類", "Parasite nicotinic receptor": "寄生蟲菸鹼型受體", "Sustained depolarization": "持續去極化", "Spastic paralysis": "強直性麻痺", "Membrane depolarization": "細胞膜去極化", "Muscle contraction": "肌肉收縮", "Ca²⁺ permeability": "鈣離子通透性", "Ca²⁺ influx": "鈣離子內流", "Tegument damage": "外皮損傷", "Antigen exposure": "抗原暴露", "Depolarizing anthelmintics": "去極化型驅蟲藥", "Praziquantel-class agents": "吡喹酮類藥物", "Oxidative phosphorylation": "氧化磷酸化", "Tapeworm mitochondria": "絛蟲粒線體", "ATP / parasite viability": "ATP／蟲體存活", "Host recognition / clearance": "宿主辨識／清除", "Filariasis; mechanism not fully defined": "絲蟲感染；機轉尚未完全釐清", "Microfilarial clearance": "幼絲蟲清除", "Luminal cestocides": "腸腔型抗絛蟲藥", "Host-assisted antifilarials": "宿主協助型抗絲蟲藥", "Developing liver stages": "肝內發育期", "Primary hepatic development": "初次肝內發育", "Asexual blood stages": "血液無性生殖期", "Clinical illness": "臨床發病", "Symptoms": "症狀", "Liver hypnozoites": "肝內休眠子", "P. vivax / P. ovale": "間日瘧原蟲／卵形瘧原蟲", "Gametocytes": "配子母細胞", "Transmission to mosquito": "傳給瘧蚊", "Blood-stage schizonticides": "血液期裂殖體殺滅藥", "Anti-relapse 8-aminoquinolines": "防復發的 8-胺基喹啉類", "Atovaquone–proguanil": "阿托伐醌與氯胍複方", "Hemoglobin digestion": "血紅素消化", "Free heme": "游離血基質", "Toxic to the parasite": "對瘧原蟲有毒", "Hemozoin": "瘧色素", "Less toxic sequestration": "較低毒性的隔離形式", "Heme detoxification": "血基質解毒", "4-aminoquinolines": "4-胺基喹啉類", "Mitochondrial electron transport": "粒線體電子傳遞", "Cytochrome bc₁ complex": "細胞色素 bc₁ 複合體", "Parasite metabolic function": "瘧原蟲代謝功能", "Dihydrofolate": "二氫葉酸", "Parasite DHFR": "瘧原蟲二氫葉酸還原酶", "Reduced folate / dTMP": "還原型葉酸／dTMP", "Nucleotide synthesis": "核苷酸合成", "Mitochondrial inhibitors": "粒線體抑制藥", "Antifolate prodrugs": "抗葉酸前驅藥", "Intestinal lumen": "腸腔", "Luminal parasites / cyst carriage": "腸腔寄生蟲／囊體帶原", "Invasive trophozoites": "侵襲性滋養體", "Intestinal wall / tissue disease": "腸壁／組織病灶", "Liver / other tissue infection": "肝臟／其他組織感染", "Residual luminal infection": "殘餘腸腔感染", "Persists after tissue therapy": "組織治療後仍可能殘留", "Tissue-active nitroimidazoles": "組織作用型硝基咪唑類", "Luminal amebicides": "腸腔型抗阿米巴藥", "Historical tissue protein-synthesis inhibitors": "舊式抗阿米巴蛋白合成抑制藥", "Mast-cell degranulation": "肥大細胞脫顆粒", "IgE cross-linking": "IgE 交聯", "Histamine": "組織胺", "H₁ receptor": "H₁ 受體", "H₂ receptor": "H₂ 受體", "Allergic responses": "過敏反應", "Pruritus / permeability ↑": "搔癢／通透性增加", "Gastric acid secretion": "胃酸分泌", "Normal physiology": "正常生理", "Baseline · no drug": "基準狀態・未用藥", "Mast-cell stabilizers": "肥大細胞穩定劑", "Release ↓": "釋放減少", "First-generation H₁ blockers": "第一代 H₁ 阻斷劑", "Second-generation H₁ blockers": "第二代 H₁ 阻斷劑", "H₁ blockers": "H₁ 阻斷劑", "H₂ blockers": "H₂ 阻斷劑", "Serotonin": "血清素", "Ligand-gated cation channel": "配體開啟的陽離子通道", "Emetic signaling": "嘔吐訊號", "Smooth-muscle signaling": "平滑肌訊號", "Neuropeptide release ↓": "神經胜肽釋放減少", "ACh release / motility ↑": "乙醯膽鹼釋放／腸胃蠕動增加", "5-HT₂ antagonists": "5-HT₂ 拮抗劑", "5-HT₃ antagonists": "5-HT₃ 拮抗劑", "5-HT₄ agonists": "5-HT₄ 致效劑", "Triptans": "曲普坦類", "Angiotensinogen": "血管張力素原", "Renin": "腎素", "Ang I": "血管張力素 I", "Ang II": "血管張力素 II", "ACE": "血管張力素轉換酶", "AT₁ receptor": "AT₁ 受體", "Aldosterone": "醛固酮", "Aldosterone ↑": "醛固酮增加", "Vasoconstriction": "血管收縮", "Bradykinin": "緩激肽", "Inactive peptides": "失活胜肽", "B₂ receptor": "B₂ 受體", "Vasodilation / permeability ↑": "血管擴張／通透性增加", "Direct renin inhibitors": "直接腎素抑制劑", "ACE inhibitors": "血管張力素轉換酶抑制劑", "Angiotensin receptor blockers": "血管張力素受體阻斷劑", "Bradykinin B₂ antagonists": "緩激肽 B₂ 拮抗劑", "Arachidonic acid": "花生四烯酸", "PLA₂ releases membrane AA": "磷脂酶 A₂ 釋出膜上的花生四烯酸", "5-lipoxygenase": "5-脂氧合酶", "Cysteinyl leukotrienes": "半胱胺醯白三烯", "CysLT₁ receptor": "半胱胺醯白三烯第一型受體", "Bronchoconstriction": "支氣管收縮", "COX": "環氧合酶", "COX inhibitors": "環氧合酶抑制劑", "5-LO inhibitors": "5-脂氧合酶抑制劑", "CysLT₁ antagonists": "半胱胺醯白三烯第一型拮抗劑", "EP receptors": "前列腺素 E 受體", "FP receptor": "前列腺素 F 受體", "IP receptor": "前列環素受體", "PGE signaling": "前列腺素 E 訊號", "PGF₂α signaling": "前列腺素 F₂α 訊號", "Prostacyclin signaling": "前列環素訊號", "Gastric protection": "胃黏膜保護", "Uterine effects": "子宮作用", "Uveoscleral outflow ↑": "葡萄膜鞏膜房水流出增加", "Intraocular pressure ↓": "眼內壓下降", "Pulmonary vasodilation": "肺血管擴張", "Platelet aggregation ↓": "血小板聚集減少", "PGE analogs": "前列腺素 E 類似物", "Ophthalmic PGF analogs": "眼用前列腺素 F 類似物", "Prostacyclin-pathway agents": "前列環素路徑藥物", "Nonprostanoid IP agonists": "非前列腺素類 IP 致效劑", "L-arginine → NO": "左旋精胺酸轉為一氧化氮", "NO": "一氧化氮", "eNOS": "內皮型一氧化氮合酶", "Soluble GC": "可溶性鳥苷酸環化酶", "Smooth-muscle relaxation": "平滑肌舒張", "Endothelial H₁": "內皮細胞 H₁ 受體", "This endothelial branch only": "僅此內皮分支", "Vasodilation": "血管擴張", "NAM / NAG precursors": "胞壁酸／葡萄糖胺前驅物", "Bactoprenol": "細菌異戊二烯脂質載體", "Lipid carrier cycle": "脂質載體循環", "Lipid-carrier cycle inhibitors": "脂質載體循環抑制劑", "Peptide side chains": "胜肽側鏈", "Peptide terminus": "胜肽末端", "Transpeptidase": "轉胜肽酶", "PBP": "青黴素結合蛋白", "Cross-linked peptidoglycan": "交聯的胜肽聚醣", "Cell-wall integrity": "細胞壁完整性", "Osmotic protection": "抵抗滲透壓變化", "Early synthesis inhibitors": "早期合成抑制劑", "β-lactams": "β-內醯胺類", "Glycopeptides": "醣胜肽類", "Lipoglycopeptides": "脂醣胜肽類", "Membrane barrier": "細胞膜屏障", "Ion gradient": "離子濃度梯度", "Membrane potential": "膜電位", "Energy-dependent functions": "依賴能量的功能", "Membrane disruption": "細胞膜破壞", "Depolarization": "去極化", "Polymyxins": "多黏菌素類", "Cyclic lipopeptides": "環狀脂胜肽類", "Also inhibits cell-wall synthesis": "亦抑制細胞壁合成", "PABA": "對胺基苯甲酸", "DHF": "二氫葉酸", "THF": "四氫葉酸", "DHPS": "二氫蝶酸合成酶", "DHFR": "二氫葉酸還原酶", "Purines / thymidylate": "嘌呤／胸苷酸", "DNA synthesis": "DNA 合成", "Sulfonamides": "磺胺類", "DHFR inhibitors": "二氫葉酸還原酶抑制劑", "Sequential folate blockers": "葉酸路徑序列阻斷藥", "Sequential blockade": "序列阻斷", "70S initiation complex": "70S 起始複合體", "30S A-site": "30S 的 A 位點", "Aminoacyl-tRNA entry": "胺醯轉運 RNA 進入", "50S peptidyl transferase": "50S 胜肽轉移酶", "Peptide-bond formation": "胜肽鍵形成", "50S-associated steps": "50S 相關步驟", "Translocation / elongation": "移位／延長", "Misreading + impaired initiation": "誤讀與起始受阻", "Aminoglycosides": "胺基醣苷類", "Tetracyclines": "四環黴素類", "Oxazolidinones": "噁唑烷酮類", "Peptidyl-transferase inhibitors": "胜肽轉移酶抑制劑", "50S elongation inhibitors": "50S 延長抑制劑", "DNA gyrase / Topo IV": "DNA 旋轉酶／第四型拓樸異構酶", "DNA topology": "DNA 拓樸結構", "Replication / segregation": "複製／染色體分離", "RNA polymerase": "RNA 聚合酶", "RNA synthesis": "RNA 合成", "Microbial reducing systems": "微生物還原系統", "Reductive activation": "還原活化", "Reactive intermediates": "反應性中間產物", "DNA / other targets damaged": "DNA／其他標的受損", "Fluoroquinolones": "氟喹諾酮類", "RNA polymerase inhibitors": "RNA 聚合酶抑制劑", "Nitroimidazoles": "硝基咪唑類", "Nitrofurans": "硝基呋喃類", "Uric acid": "尿酸", "Hypoxanthine": "次黃嘌呤", "Xanthine": "黃嘌呤", "Xanthine oxidase": "黃嘌呤氧化酶", "Xanthine oxidase inhibitors": "黃嘌呤氧化酶抑制劑", "Urate crystals": "尿酸鹽結晶", "Neutrophil inflammation": "嗜中性球發炎反應", "Tubular urate reabsorption": "腎小管尿酸再吸收", "Urinary urate excretion": "尿液尿酸排泄", "Renal / intestinal elimination": "腎臟／腸道排除", "Reabsorption ↓; excretion ↑": "再吸收減少；排泄增加", "Uricosurics": "促尿酸排泄藥", "Uricase": "尿酸氧化酶", "Uricase agents": "尿酸氧化酶製劑", "Allantoin": "尿囊素", "More water-soluble": "水溶性較高", "Hyperuricemia-dependent": "取決於高尿酸血症", "Microtubule disruption": "微小管破壞", "Microtubule inhibitors": "微小管抑制劑", "Hypothalamus": "下視丘", "Anterior pituitary": "腦下垂體前葉", "Adrenal cortex": "腎上腺皮質", "CRH": "促腎上腺皮質素釋放激素", "ACTH": "促腎上腺皮質素", "Cortisol": "皮質醇", "Cortisone": "可體松", "Intracellular GR": "細胞內糖皮質素受體", "Ligand-activated receptor": "配體活化受體", "Gene regulation": "基因調控", "Immune responses": "免疫反應", "Exogenous glucocorticoid": "外源性糖皮質素", "Glucocorticoids": "糖皮質素", "GR antagonists": "糖皮質素受體拮抗劑", "Cholesterol": "膽固醇", "Pregnenolone": "孕烯醇酮", "17-OH intermediates": "17-羥基中間產物", "11-Deoxycortisol": "11-去氧皮質醇", "11β-hydroxylase": "11β-羥化酶", "17α-hydroxylase / lyase": "17α-羥化酶／裂解酶", "DHEA branch": "去氫表雄酮分支", "Androgens": "雄性素", "Multiple steroidogenic CYPs": "多種類固醇生成酵素", "Multiple-CYP inhibitors": "多種 CYP 抑制劑", "11β-hydroxylase inhibitors": "11β-羥化酶抑制劑", "CYP17A1 inhibitors": "CYP17A1 抑制劑", "Renal tubular MR": "腎小管礦物皮質素受體", "RAAS / K⁺ regulation": "腎素系統／血鉀調控", "Na⁺ retention / K⁺ excretion": "鈉滯留／鉀排出", "Water / volume ↑": "水分／體液量增加", "Mineralocorticoids": "礦物皮質素", "Nonselective MR antagonists": "非選擇性礦物皮質素受體拮抗劑", "Selective MR antagonists": "選擇性礦物皮質素受體拮抗劑", "Low MR activity": "礦物皮質素活性低", "Squalene": "鯊烯", "Squalene epoxidase": "鯊烯環氧化酶", "Squalene monooxygenase": "鯊烯單加氧酶", "Squalene-2,3-epoxide": "鯊烯-2,3-環氧化物", "Lanosterol": "羊毛固醇", "Lanosterol cyclase": "羊毛固醇環化酶", "14α-demethylase": "14α-去甲基酶", "Fungal CYP51": "黴菌 CYP51 酵素", "Ergosterol": "麥角固醇", "Plasma-membrane sterol": "細胞膜固醇", "After additional sterol reactions": "經後續固醇反應", "Allylamines": "烯丙胺類", "Azoles": "唑類", "β-1,3-D-glucan synthase": "β-1,3-D-葡聚糖合成酶", "β-1,3-D-glucan": "β-1,3-D-葡聚糖", "Echinocandins": "棘白菌素類", "Existing ergosterol": "既存麥角固醇", "Polyenes": "多烯類", "Membrane integrity": "細胞膜完整性", "Selective permeability": "選擇性通透性", "Retention of cell contents": "保留細胞內容物", "Membrane function": "細胞膜功能", "Nucleoside": "核苷", "Cytosine": "胞嘧啶", "Cytosine deaminase": "胞嘧啶去胺酶", "Conversion to 5-FU": "轉為 5-氟尿嘧啶", "Fungal pyrimidine metabolism": "黴菌嘧啶代謝", "Nucleic-acid synthesis": "核酸合成", "Pyrimidine antimetabolites": "嘧啶抗代謝藥", "Tubulin": "微管蛋白", "Mitotic spindle": "有絲分裂紡錘體", "Mitosis": "有絲分裂", "Mitotic inhibitors": "有絲分裂抑制劑", "Drug activation": "藥物活化", "Cellular kinase": "宿主細胞激酶", "Cellular kinases": "宿主細胞激酶", "Monophosphate": "單磷酸形式", "Triphosphate": "三磷酸形式", "Host kinases only": "僅由宿主激酶活化", "No activation needed": "不需活化", "Viral TK → host kinases": "病毒胸苷激酶後由宿主激酶活化", "CMV UL97 → host kinases": "巨細胞病毒 UL97 後由宿主激酶活化", "Guanosine analogues · HSV / VZV": "鳥苷類似物・單純皰疹／水痘帶狀皰疹病毒", "Guanosine analogues · CMV": "鳥苷類似物・巨細胞病毒", "Nucleotide analogues": "核苷酸類似物", "Pyrophosphate analogues": "焦磷酸類似物", "Viral DNA polymerase": "病毒 DNA 聚合酶", "Viral DNA synthesis": "病毒 DNA 合成", "Viral DNA": "病毒 DNA", "DNA elongation": "DNA 延長", "CD4 binding": "與 CD4 結合", "CCR5 coreceptor": "CCR5 共同受體", "Viral gp120": "病毒 gp120 蛋白", "Viral entry": "病毒進入", "Entry blockers": "進入阻斷劑", "CCR5 antagonists": "CCR5 拮抗劑", "Fusion inhibitors": "融合抑制劑", "Viral RNA": "病毒 RNA", "Reverse transcriptase": "反轉錄酶", "Integrase": "嵌合酶", "Integrated provirus": "已整合的前病毒", "Viral polyproteins": "病毒多蛋白", "HIV protease": "人類免疫缺乏病毒蛋白酶", "Mature virions": "成熟病毒顆粒", "NRTIs": "核苷／核苷酸型反轉錄酶抑制劑", "NNRTIs": "非核苷型反轉錄酶抑制劑", "INSTIs": "嵌合酶鏈轉移抑制劑", "Protease inhibitors": "蛋白酶抑制劑", "RNA entry": "RNA 進入", "M2 proton channel": "M2 質子通道", "Uncoating": "脫殼", "Viral mRNA": "病毒訊息 RNA", "Cap-dependent endonuclease": "帽依賴型核酸內切酶", "Viral proteins": "病毒蛋白", "Assembly / budding": "組裝／出芽", "Neuraminidase": "神經胺酸酶", "Virion release": "病毒顆粒釋出", "Spread to other cells": "散播至其他細胞", "M2 channel blockers": "M2 通道阻斷劑", "Endonuclease inhibitors": "核酸內切酶抑制劑", "Neuraminidase inhibitors": "神經胺酸酶抑制劑", "Viral RNA template": "病毒 RNA 模板", "RNA-dependent RNA polymerase": "RNA 依賴型 RNA 聚合酶", "Faithful viral RNA": "正確複製的病毒 RNA", "Normal RNA synthesis": "正常 RNA 合成", "Genome replication": "基因體複製", "Viral polyprotein": "病毒多蛋白", "Main protease": "主要蛋白酶", "Processed proteins": "切割後的蛋白", "Functional viral proteins": "具功能的病毒蛋白", "Polymerase-inhibiting analogues": "抑制聚合酶的類似物", "Mutagenic nucleoside analogues": "誘發突變的核苷類似物", "Viral protease inhibitors": "病毒蛋白酶抑制劑", "IMP": "次黃苷酸", "IMPDH": "次黃苷酸去氫酶", "Guanine nucleotides": "鳥嘌呤核苷酸", "Lymphocyte proliferation": "淋巴球增生", "Dihydroorotate": "二氫乳清酸", "DHODH": "二氫乳清酸去氫酶", "Pyrimidine nucleotides": "嘧啶核苷酸", "Clonal expansion": "克隆增殖", "IMPDH inhibitors": "次黃苷酸去氫酶抑制劑", "DHODH inhibitors": "二氫乳清酸去氫酶抑制劑", "Calcineurin": "鈣調神經磷酸酶", "Dephosphorylation": "去磷酸化", "NFAT activation": "活化 T 細胞核因子活化", "IL-2 production": "介白素 2 生成", "IL-2 receptor": "介白素 2 受體", "T-cell functions": "T 細胞功能", "Calcineurin inhibitors": "鈣調神經磷酸酶抑制劑", "Different immunophilins; same enzyme": "結合不同免疫親和蛋白；抑制同一酵素", "mTOR inhibitors": "mTOR 抑制劑", "FKBP12; not calcineurin": "結合 FKBP12；不抑制鈣調神經磷酸酶", "IL-2Rα blockers": "介白素 2 受體 α 鏈阻斷劑", "IL-1": "介白素 1", "IL-1 receptor": "介白素 1 受體", "IL-6": "介白素 6", "IL-6 receptor": "介白素 6 受體", "IL-17A": "介白素 17A", "IL-17 receptor": "介白素 17 受體", "TNF-α": "腫瘤壞死因子 α", "TNF receptor": "腫瘤壞死因子受體", "Inflammatory signaling": "發炎訊號", "TNF neutralizers": "腫瘤壞死因子中和藥", "IL-1 neutralizers / traps": "介白素 1 中和／捕捉藥", "IL-1 receptor antagonists": "介白素 1 受體拮抗劑", "IL-6R blockers": "介白素 6 受體阻斷劑", "IL-17A neutralizers": "介白素 17A 中和藥", "CD3⁺ T cells": "CD3 陽性 T 細胞", "CD20⁺ B cells": "CD20 陽性 B 細胞", "CD52⁺ immune cells": "CD52 陽性免疫細胞", "B-cell functions": "B 細胞功能", "Multiple cell populations": "多種細胞族群", "Anti-CD3 antibodies": "抗 CD3 抗體", "Anti-CD20 antibodies": "抗 CD20 抗體", "Anti-CD52 antibodies": "抗 CD52 抗體", "B7 on APC": "抗原呈現細胞上的 B7", "On T cell": "位於 T 細胞", "On tumor / other cells": "位於腫瘤／其他細胞", "Inhibitory receptor": "抑制性受體", "T-cell activity": "T 細胞活性", "CTLA-4–Ig fusion proteins": "CTLA-4–Ig 融合蛋白", "Anti-CTLA-4 antibodies": "抗 CTLA-4 抗體", "Anti-PD-1 antibodies": "抗 PD-1 抗體", "Anti-PD-L1 antibodies": "抗 PD-L1 抗體", "Leukocyte": "白血球", "Leukocyte integrin": "白血球整合素", "Endothelial ligand": "內皮細胞配體", "Endothelial / tissue ligand": "內皮／組織配體", "Adhesion / migration": "黏附／移行", "Inflammatory recruitment": "發炎細胞招募", "CNS trafficking": "移行至中樞神經系統", "Anti-CD11a antibodies": "抗 CD11a 抗體", "Anti-α4 integrin antibodies": "抗 α4 整合素抗體", "C5 cleavage": "C5 裂解", "MAC / membrane lysis": "膜攻擊複合體／細胞膜溶解", "Anti-C5 antibodies": "抗 C5 抗體", "Interferon receptors": "干擾素受體", "Immune / antiviral responses": "免疫／抗病毒反應", "Innate and adaptive": "先天與適應性免疫", "CSF receptors": "群落刺激因子受體", "Myeloid cell production": "骨髓系細胞生成", "T / NK-cell expansion": "T／自然殺手細胞增殖", "Interferons": "干擾素", "Colony-stimulating factors": "群落刺激因子", "IL-2 agonists": "介白素 2 致效劑", "Diffusion": "擴散", "Host protein": "宿主蛋白", "HSP dissociation": "熱休克蛋白解離", "Inflammatory gene program": "發炎相關基因表現", "After transcription / translation": "經轉錄／轉譯", "Lymphocyte functions": "淋巴球功能", "Tissue-dependent": "依組織而異", "Gq / PLC": "Gq／磷脂酶 C", "Gs / cAMP": "Gs／環腺苷酸", "Gi": "抑制型 G 蛋白", "Gq / Ca²⁺ ↑": "Gq／細胞內鈣離子增加", "Ca²⁺ / calmodulin": "鈣離子／鈣調蛋白", "cGMP / PKG": "環鳥苷酸／蛋白激酶 G", "ENaC / Na⁺-K⁺ pump": "上皮鈉通道／鈉鉀幫浦", "11β-HSD2": "11β-羥類固醇去氫酶第二型", "GRE / NF-κB interactions": "糖皮質素反應元件／核因子 κB 交互作用", "NF-κB / AP-1 modulation": "調節核因子 κB／活化蛋白 1", "Multiple reactions": "多步反應", "Multiple reactive targets": "多個反應性標的", "Pyrimidine nucleotide pool": "嘧啶核苷酸總量", "Uracil derivatives": "尿嘧啶衍生物", "dTMP supply": "去氧胸苷酸供應", "RNA function": "RNA 功能", "Viral protein": "病毒蛋白", "gp41-mediated fusion": "gp41 媒介的融合", "30S + 50S": "30S 與 50S 次單元", "CD25 = IL-2Rα": "CD25 即介白素 2 受體 α 鏈", "mTORC1": "mTOR 複合體一", "RdRp": "RNA 依賴型 RNA 聚合酶", "Mpro / 3CLpro": "主要／3C 樣蛋白酶", "α4 integrin": "α4 整合素", "LFA-1 / CD11a": "淋巴球功能相關抗原／CD11a"};let enabled=false,pending=false;window.__showChinese=false;
-const ns='http://www.w3.org/2000/svg';
-const button=document.createElement('button');button.type='button';button.className='zh-toggle';button.setAttribute('aria-pressed','false');button.textContent='顯示中文對照';document.querySelector('h1').after(button);
-function apply(){
- document.querySelectorAll('svg.map').forEach(svg=>{
- const box=svg.viewBox.baseVal,r=svg.getBoundingClientRect(),scale=Math.min(r.width/box.width,r.height/box.height)||1;
- svg.querySelectorAll('text').forEach(t=>{
- const en=t.dataset.en||(t.dataset.en=t.textContent),baseY=Number(t.dataset.baseY||(t.dataset.baseY=t.getAttribute('y'))),small=Number(t.getAttribute('font-size'))<=14;
- const y=baseY+(enabled&&small?14/scale:0);if(Number(t.getAttribute('y'))!==y)t.setAttribute('y',y);
- const zh=terms[en];if(!zh||!enabled){if(t.childElementCount)t.textContent=en;delete t.dataset.zhScale;return;}
- if(t.dataset.zhScale===String(scale))return;
- t.textContent='';const eng=document.createElementNS(ns,'tspan');eng.textContent=en;t.append(eng);
- const z=document.createElementNS(ns,'tspan');z.setAttribute('x',t.getAttribute('x'));z.setAttribute('dy',String(14/scale));z.style.fontSize=String(10.5/scale)+'px';z.setAttribute('fill','#73818c');z.setAttribute('font-weight','400');z.textContent=zh;t.append(z);t.dataset.zhScale=String(scale);
- });
- const model=typeof data!=='undefined'?data.find(m=>m.slug===svg.closest('section')?.id):null;
- if(model)svg.querySelectorAll('path.line:not(.terminal-cap)').forEach(path=>{
- const original=path.dataset.zhOriginalD||(path.dataset.zhOriginalD=path.getAttribute('d'));let next=original;
- const start=/^M([\d.]+)\s+([\d.]+)/.exec(original);
- if(enabled&&start){const x=Number(start[1]),y=Number(start[2]),node=model.nodes.find(n=>Math.abs(n.x-x)<1&&y>=n.y+15&&y<=n.y+45);
- if(node){let bottom=node.y;svg.querySelectorAll('text').forEach(t=>{const ty=Number(t.dataset.baseY??t.getAttribute('y'));if(Number(t.getAttribute('x'))===node.x&&(ty===node.y||ty===node.y+22)){const bb=t.getBBox();bottom=Math.max(bottom,bb.y+bb.height);}});const newY=Math.max(y,bottom+9/scale);next=original.replace(start[0],'M'+x+' '+newY);}}
- if(path.getAttribute('d')!==next)path.setAttribute('d',next);
- });
- if(!svg._zhResize){svg._zhResize=new ResizeObserver(()=>apply());svg._zhResize.observe(svg);}
- });
+</script><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:12px 0;font-size:13px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}.zh-glossary>div{display:flex;justify-content:space-between;gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font-size:13px;color:#506e84;padding:5px 0;min-height:32px;margin:0 0 10px}.zh-glossary{margin:10px 0;font-size:12px;line-height:1.65;color:#617286;display:grid;grid-template-columns:1fr;gap:3px;max-width:650px}.zh-glossary>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,1fr);gap:14px}.zh-glossary span:last-child{color:#53677c}</style><style>.zh-toggle{font:inherit;font-size:13px;font-weight:600;color:#506e84;background:white;border:0;border-bottom:2px solid #607d94;cursor:pointer;padding:6px 0;min-height:32px;margin:0 0 12px}.zh-toggle[aria-pressed="true"]{color:#36566f}</style><style>svg.stable-map{width:100%!important;min-width:0!important;max-height:none!important;height:auto!important;display:block;overflow:visible}.stable-map text{font-family:"Helvetica Neue",Helvetica,Arial,"PingFang TC",sans-serif;font-weight:400}.stable-map .drug-name{font-weight:600}.stable-map .zh{visibility:visible}.stable-map .dimmed{opacity:.32}.frame:has(.stable-map){overflow-x:auto!important;overflow-y:visible!important;padding:12px 0!important}.zh-toggle{font:inherit;font-size:13px;font-weight:600;color:#506e84;background:white;border:0;border-bottom:2px solid #607d94;cursor:pointer;padding:6px 0;margin:0 0 12px}</style><script data-dual-layout>(()=>{
+const terms={
+  "Parasite β-tubulin": "寄生蟲 β 微管蛋白",
+  "Microtubule assembly": "微小管聚合",
+  "Nutrient uptake / survival": "養分攝取／存活",
+  "Benzimidazoles": "苯并咪唑類",
+  "Parasite nicotinic receptor": "寄生蟲菸鹼型受體",
+  "Sustained depolarization": "持續去極化",
+  "Spastic paralysis": "強直性麻痺",
+  "Membrane depolarization": "細胞膜去極化",
+  "Muscle contraction": "肌肉收縮",
+  "Ca²⁺ permeability": "鈣離子通透性",
+  "Ca²⁺ influx": "鈣離子內流",
+  "Tegument damage": "外皮損傷",
+  "Antigen exposure": "抗原暴露",
+  "Depolarizing anthelmintics": "去極化型驅蟲藥",
+  "Praziquantel-class agents": "吡喹酮類藥物",
+  "Oxidative phosphorylation": "氧化磷酸化",
+  "Tapeworm mitochondria": "絛蟲粒線體",
+  "ATP / parasite viability": "ATP／蟲體存活",
+  "Host recognition / clearance": "宿主辨識／清除",
+  "Filariasis; mechanism not fully defined": "絲蟲感染；機轉尚未完全釐清",
+  "Microfilarial clearance": "幼絲蟲清除",
+  "Luminal cestocides": "腸腔型抗絛蟲藥",
+  "Host-assisted antifilarials": "宿主協助型抗絲蟲藥",
+  "Developing liver stages": "肝內發育期",
+  "Primary hepatic development": "初次肝內發育",
+  "Asexual blood stages": "血液無性生殖期",
+  "Clinical illness": "臨床發病",
+  "Symptoms": "症狀",
+  "Liver hypnozoites": "肝內休眠子",
+  "P. vivax / P. ovale": "間日瘧原蟲／卵形瘧原蟲",
+  "Gametocytes": "配子母細胞",
+  "Transmission to mosquito": "傳給瘧蚊",
+  "Blood-stage schizonticides": "血液期裂殖體殺滅藥",
+  "Anti-relapse 8-aminoquinolines": "防復發的 8-胺基喹啉類",
+  "Atovaquone–proguanil": "阿托伐醌與氯胍複方",
+  "Hemoglobin digestion": "血紅素消化",
+  "Free heme": "游離血基質",
+  "Toxic to the parasite": "對瘧原蟲有毒",
+  "Hemozoin": "瘧色素",
+  "Less toxic sequestration": "較低毒性的隔離形式",
+  "Heme detoxification": "血基質解毒",
+  "4-aminoquinolines": "4-胺基喹啉類",
+  "Mitochondrial electron transport": "粒線體電子傳遞",
+  "Cytochrome bc₁ complex": "細胞色素 bc₁ 複合體",
+  "Parasite metabolic function": "瘧原蟲代謝功能",
+  "Dihydrofolate": "二氫葉酸",
+  "Parasite DHFR": "瘧原蟲二氫葉酸還原酶",
+  "Reduced folate / dTMP": "還原型葉酸／dTMP",
+  "Nucleotide synthesis": "核苷酸合成",
+  "Mitochondrial inhibitors": "粒線體抑制藥",
+  "Antifolate prodrugs": "抗葉酸前驅藥",
+  "Intestinal lumen": "腸腔",
+  "Luminal parasites / cyst carriage": "腸腔寄生蟲／囊體帶原",
+  "Invasive trophozoites": "侵襲性滋養體",
+  "Intestinal wall / tissue disease": "腸壁／組織病灶",
+  "Liver / other tissue infection": "肝臟／其他組織感染",
+  "Residual luminal infection": "殘餘腸腔感染",
+  "Persists after tissue therapy": "組織治療後仍可能殘留",
+  "Tissue-active nitroimidazoles": "組織作用型硝基咪唑類",
+  "Luminal amebicides": "腸腔型抗阿米巴藥",
+  "Historical tissue protein-synthesis inhibitors": "舊式抗阿米巴蛋白合成抑制藥",
+  "Mast-cell degranulation": "肥大細胞脫顆粒",
+  "IgE cross-linking": "IgE 交聯",
+  "Histamine": "組織胺",
+  "H₁ receptor": "H₁ 受體",
+  "H₂ receptor": "H₂ 受體",
+  "Allergic responses": "過敏反應",
+  "Pruritus / permeability ↑": "搔癢／通透性增加",
+  "Gastric acid secretion": "胃酸分泌",
+  "Normal physiology": "正常生理",
+  "Baseline · no drug": "基準狀態・未用藥",
+  "Mast-cell stabilizers": "肥大細胞穩定劑",
+  "Release ↓": "釋放減少",
+  "First-generation H₁ blockers": "第一代 H₁ 阻斷劑",
+  "Second-generation H₁ blockers": "第二代 H₁ 阻斷劑",
+  "H₁ blockers": "H₁ 阻斷劑",
+  "H₂ blockers": "H₂ 阻斷劑",
+  "Serotonin": "血清素",
+  "Ligand-gated cation channel": "配體開啟的陽離子通道",
+  "Emetic signaling": "嘔吐訊號",
+  "Smooth-muscle signaling": "平滑肌訊號",
+  "Neuropeptide release ↓": "神經胜肽釋放減少",
+  "ACh release / motility ↑": "乙醯膽鹼釋放／腸胃蠕動增加",
+  "5-HT₂ antagonists": "5-HT₂ 拮抗劑",
+  "5-HT₃ antagonists": "5-HT₃ 拮抗劑",
+  "5-HT₄ agonists": "5-HT₄ 致效劑",
+  "Triptans": "曲普坦類",
+  "Angiotensinogen": "血管張力素原",
+  "Renin": "腎素",
+  "Ang I": "血管張力素 I",
+  "Ang II": "血管張力素 II",
+  "ACE": "血管張力素轉換酶",
+  "AT₁ receptor": "AT₁ 受體",
+  "Aldosterone": "醛固酮",
+  "Aldosterone ↑": "醛固酮增加",
+  "Vasoconstriction": "血管收縮",
+  "Bradykinin": "緩激肽",
+  "Inactive peptides": "失活胜肽",
+  "B₂ receptor": "B₂ 受體",
+  "Vasodilation / permeability ↑": "血管擴張／通透性增加",
+  "Direct renin inhibitors": "直接腎素抑制劑",
+  "ACE inhibitors": "血管張力素轉換酶抑制劑",
+  "Angiotensin receptor blockers": "血管張力素受體阻斷劑",
+  "Bradykinin B₂ antagonists": "緩激肽 B₂ 拮抗劑",
+  "Arachidonic acid": "花生四烯酸",
+  "PLA₂ releases membrane AA": "磷脂酶 A₂ 釋出膜上的花生四烯酸",
+  "5-lipoxygenase": "5-脂氧合酶",
+  "Cysteinyl leukotrienes": "半胱胺醯白三烯",
+  "CysLT₁ receptor": "半胱胺醯白三烯第一型受體",
+  "Bronchoconstriction": "支氣管收縮",
+  "COX": "環氧合酶",
+  "COX inhibitors": "環氧合酶抑制劑",
+  "5-LO inhibitors": "5-脂氧合酶抑制劑",
+  "CysLT₁ antagonists": "半胱胺醯白三烯第一型拮抗劑",
+  "EP receptors": "前列腺素 E 受體",
+  "FP receptor": "前列腺素 F 受體",
+  "IP receptor": "前列環素受體",
+  "PGE signaling": "前列腺素 E 訊號",
+  "PGF₂α signaling": "前列腺素 F₂α 訊號",
+  "Prostacyclin signaling": "前列環素訊號",
+  "Gastric protection": "胃黏膜保護",
+  "Uterine effects": "子宮作用",
+  "Uveoscleral outflow ↑": "葡萄膜鞏膜房水流出增加",
+  "Intraocular pressure ↓": "眼內壓下降",
+  "Pulmonary vasodilation": "肺血管擴張",
+  "Platelet aggregation ↓": "血小板聚集減少",
+  "PGE analogs": "前列腺素 E 類似物",
+  "Ophthalmic PGF analogs": "眼用前列腺素 F 類似物",
+  "Prostacyclin-pathway agents": "前列環素路徑藥物",
+  "Nonprostanoid IP agonists": "非前列腺素類 IP 致效劑",
+  "L-arginine → NO": "左旋精胺酸轉為一氧化氮",
+  "NO": "一氧化氮",
+  "eNOS": "內皮型一氧化氮合酶",
+  "Soluble GC": "可溶性鳥苷酸環化酶",
+  "Smooth-muscle relaxation": "平滑肌舒張",
+  "Endothelial H₁": "內皮細胞 H₁ 受體",
+  "This endothelial branch only": "僅此內皮分支",
+  "Vasodilation": "血管擴張",
+  "NAM / NAG precursors": "胞壁酸／葡萄糖胺前驅物",
+  "Bactoprenol": "細菌異戊二烯脂質載體",
+  "Lipid carrier cycle": "脂質載體循環",
+  "Lipid-carrier cycle inhibitors": "脂質載體循環抑制劑",
+  "Peptide side chains": "胜肽側鏈",
+  "Peptide terminus": "胜肽末端",
+  "Transpeptidase": "轉胜肽酶",
+  "PBP": "青黴素結合蛋白",
+  "Cross-linked peptidoglycan": "交聯的胜肽聚醣",
+  "Cell-wall integrity": "細胞壁完整性",
+  "Osmotic protection": "抵抗滲透壓變化",
+  "Early synthesis inhibitors": "早期合成抑制劑",
+  "β-lactams": "β-內醯胺類",
+  "Glycopeptides": "醣胜肽類",
+  "Lipoglycopeptides": "脂醣胜肽類",
+  "Membrane barrier": "細胞膜屏障",
+  "Ion gradient": "離子濃度梯度",
+  "Membrane potential": "膜電位",
+  "Energy-dependent functions": "依賴能量的功能",
+  "Membrane disruption": "細胞膜破壞",
+  "Depolarization": "去極化",
+  "Polymyxins": "多黏菌素類",
+  "Cyclic lipopeptides": "環狀脂胜肽類",
+  "Also inhibits cell-wall synthesis": "亦抑制細胞壁合成",
+  "PABA": "對胺基苯甲酸",
+  "DHF": "二氫葉酸",
+  "THF": "四氫葉酸",
+  "DHPS": "二氫蝶酸合成酶",
+  "DHFR": "二氫葉酸還原酶",
+  "Purines / thymidylate": "嘌呤／胸苷酸",
+  "DNA synthesis": "DNA 合成",
+  "Sulfonamides": "磺胺類",
+  "DHFR inhibitors": "二氫葉酸還原酶抑制劑",
+  "Sequential folate blockers": "葉酸路徑序列阻斷藥",
+  "Sequential blockade": "序列阻斷",
+  "70S initiation complex": "70S 起始複合體",
+  "30S A-site": "30S 的 A 位點",
+  "Aminoacyl-tRNA entry": "胺醯轉運 RNA 進入",
+  "50S peptidyl transferase": "50S 胜肽轉移酶",
+  "Peptide-bond formation": "胜肽鍵形成",
+  "50S-associated steps": "50S 相關步驟",
+  "Translocation / elongation": "移位／延長",
+  "Misreading + impaired initiation": "誤讀與起始受阻",
+  "Aminoglycosides": "胺基醣苷類",
+  "Tetracyclines": "四環黴素類",
+  "Oxazolidinones": "噁唑烷酮類",
+  "Peptidyl-transferase inhibitors": "胜肽轉移酶抑制劑",
+  "50S elongation inhibitors": "50S 延長抑制劑",
+  "DNA gyrase / Topo IV": "DNA 旋轉酶／第四型拓樸異構酶",
+  "DNA topology": "DNA 拓樸結構",
+  "Replication / segregation": "複製／染色體分離",
+  "RNA polymerase": "RNA 聚合酶",
+  "RNA synthesis": "RNA 合成",
+  "Microbial reducing systems": "微生物還原系統",
+  "Reductive activation": "還原活化",
+  "Reactive intermediates": "反應性中間產物",
+  "DNA / other targets damaged": "DNA／其他標的受損",
+  "Fluoroquinolones": "氟喹諾酮類",
+  "RNA polymerase inhibitors": "RNA 聚合酶抑制劑",
+  "Nitroimidazoles": "硝基咪唑類",
+  "Nitrofurans": "硝基呋喃類",
+  "Uric acid": "尿酸",
+  "Hypoxanthine": "次黃嘌呤",
+  "Xanthine": "黃嘌呤",
+  "Xanthine oxidase": "黃嘌呤氧化酶",
+  "Xanthine oxidase inhibitors": "黃嘌呤氧化酶抑制劑",
+  "Urate crystals": "尿酸鹽結晶",
+  "Neutrophil inflammation": "嗜中性球發炎反應",
+  "Tubular urate reabsorption": "腎小管尿酸再吸收",
+  "Urinary urate excretion": "尿液尿酸排泄",
+  "Renal / intestinal elimination": "腎臟／腸道排除",
+  "Reabsorption ↓; excretion ↑": "再吸收減少；排泄增加",
+  "Uricosurics": "促尿酸排泄藥",
+  "Uricase": "尿酸氧化酶",
+  "Uricase agents": "尿酸氧化酶製劑",
+  "Allantoin": "尿囊素",
+  "More water-soluble": "水溶性較高",
+  "Hyperuricemia-dependent": "取決於高尿酸血症",
+  "Microtubule disruption": "微小管破壞",
+  "Microtubule inhibitors": "微小管抑制劑",
+  "Hypothalamus": "下視丘",
+  "Anterior pituitary": "腦下垂體前葉",
+  "Adrenal cortex": "腎上腺皮質",
+  "CRH": "促腎上腺皮質素釋放激素",
+  "ACTH": "促腎上腺皮質素",
+  "Cortisol": "皮質醇",
+  "Cortisone": "可體松",
+  "Intracellular GR": "細胞內糖皮質素受體",
+  "Ligand-activated receptor": "配體活化受體",
+  "Gene regulation": "基因調控",
+  "Immune responses": "免疫反應",
+  "Exogenous glucocorticoid": "外源性糖皮質素",
+  "Glucocorticoids": "糖皮質素",
+  "GR antagonists": "糖皮質素受體拮抗劑",
+  "Cholesterol": "膽固醇",
+  "Pregnenolone": "孕烯醇酮",
+  "17-OH intermediates": "17-羥基中間產物",
+  "11-Deoxycortisol": "11-去氧皮質醇",
+  "11β-hydroxylase": "11β-羥化酶",
+  "17α-hydroxylase / lyase": "17α-羥化酶／裂解酶",
+  "DHEA branch": "去氫表雄酮分支",
+  "Androgens": "雄性素",
+  "Multiple steroidogenic CYPs": "多種類固醇生成酵素",
+  "Multiple-CYP inhibitors": "多種 CYP 抑制劑",
+  "11β-hydroxylase inhibitors": "11β-羥化酶抑制劑",
+  "CYP17A1 inhibitors": "CYP17A1 抑制劑",
+  "Renal tubular MR": "腎小管礦物皮質素受體",
+  "RAAS / K⁺ regulation": "腎素系統／血鉀調控",
+  "Na⁺ retention / K⁺ excretion": "鈉滯留／鉀排出",
+  "Water / volume ↑": "水分／體液量增加",
+  "Mineralocorticoids": "礦物皮質素",
+  "Nonselective MR antagonists": "非選擇性礦物皮質素受體拮抗劑",
+  "Selective MR antagonists": "選擇性礦物皮質素受體拮抗劑",
+  "Low MR activity": "礦物皮質素活性低",
+  "Squalene": "鯊烯",
+  "Squalene epoxidase": "鯊烯環氧化酶",
+  "Squalene monooxygenase": "鯊烯單加氧酶",
+  "Squalene-2,3-epoxide": "鯊烯-2,3-環氧化物",
+  "Lanosterol": "羊毛固醇",
+  "Lanosterol cyclase": "羊毛固醇環化酶",
+  "14α-demethylase": "14α-去甲基酶",
+  "Fungal CYP51": "黴菌 CYP51 酵素",
+  "Ergosterol": "麥角固醇",
+  "Plasma-membrane sterol": "細胞膜固醇",
+  "After additional sterol reactions": "經後續固醇反應",
+  "Allylamines": "烯丙胺類",
+  "Azoles": "唑類",
+  "β-1,3-D-glucan synthase": "β-1,3-D-葡聚糖合成酶",
+  "β-1,3-D-glucan": "β-1,3-D-葡聚糖",
+  "Echinocandins": "棘白菌素類",
+  "Existing ergosterol": "既存麥角固醇",
+  "Polyenes": "多烯類",
+  "Membrane integrity": "細胞膜完整性",
+  "Selective permeability": "選擇性通透性",
+  "Retention of cell contents": "保留細胞內容物",
+  "Membrane function": "細胞膜功能",
+  "Nucleoside": "核苷",
+  "Cytosine": "胞嘧啶",
+  "Cytosine deaminase": "胞嘧啶去胺酶",
+  "Conversion to 5-FU": "轉為 5-氟尿嘧啶",
+  "Fungal pyrimidine metabolism": "黴菌嘧啶代謝",
+  "Nucleic-acid synthesis": "核酸合成",
+  "Pyrimidine antimetabolites": "嘧啶抗代謝藥",
+  "Tubulin": "微管蛋白",
+  "Mitotic spindle": "有絲分裂紡錘體",
+  "Mitosis": "有絲分裂",
+  "Mitotic inhibitors": "有絲分裂抑制劑",
+  "Drug activation": "藥物活化",
+  "Cellular kinase": "宿主細胞激酶",
+  "Cellular kinases": "宿主細胞激酶",
+  "Monophosphate": "單磷酸形式",
+  "Triphosphate": "三磷酸形式",
+  "Host kinases only": "僅由宿主激酶活化",
+  "No activation needed": "不需活化",
+  "Viral TK → host kinases": "病毒胸苷激酶後由宿主激酶活化",
+  "CMV UL97 → host kinases": "巨細胞病毒 UL97 後由宿主激酶活化",
+  "Guanosine analogues · HSV / VZV": "鳥苷類似物・單純皰疹／水痘帶狀皰疹病毒",
+  "Guanosine analogues · CMV": "鳥苷類似物・巨細胞病毒",
+  "Nucleotide analogues": "核苷酸類似物",
+  "Pyrophosphate analogues": "焦磷酸類似物",
+  "Viral DNA polymerase": "病毒 DNA 聚合酶",
+  "Viral DNA synthesis": "病毒 DNA 合成",
+  "Viral DNA": "病毒 DNA",
+  "DNA elongation": "DNA 延長",
+  "CD4 binding": "與 CD4 結合",
+  "CCR5 coreceptor": "CCR5 共同受體",
+  "Viral gp120": "病毒 gp120 蛋白",
+  "Viral entry": "病毒進入",
+  "Entry blockers": "進入阻斷劑",
+  "CCR5 antagonists": "CCR5 拮抗劑",
+  "Fusion inhibitors": "融合抑制劑",
+  "Viral RNA": "病毒 RNA",
+  "Reverse transcriptase": "反轉錄酶",
+  "Integrase": "嵌合酶",
+  "Integrated provirus": "已整合的前病毒",
+  "Viral polyproteins": "病毒多蛋白",
+  "HIV protease": "人類免疫缺乏病毒蛋白酶",
+  "Mature virions": "成熟病毒顆粒",
+  "NRTIs": "核苷／核苷酸型反轉錄酶抑制劑",
+  "NNRTIs": "非核苷型反轉錄酶抑制劑",
+  "INSTIs": "嵌合酶鏈轉移抑制劑",
+  "Protease inhibitors": "蛋白酶抑制劑",
+  "RNA entry": "RNA 進入",
+  "M2 proton channel": "M2 質子通道",
+  "Uncoating": "脫殼",
+  "Viral mRNA": "病毒訊息 RNA",
+  "Cap-dependent endonuclease": "帽依賴型核酸內切酶",
+  "Viral proteins": "病毒蛋白",
+  "Assembly / budding": "組裝／出芽",
+  "Neuraminidase": "神經胺酸酶",
+  "Virion release": "病毒顆粒釋出",
+  "Spread to other cells": "散播至其他細胞",
+  "M2 channel blockers": "M2 通道阻斷劑",
+  "Endonuclease inhibitors": "核酸內切酶抑制劑",
+  "Neuraminidase inhibitors": "神經胺酸酶抑制劑",
+  "Viral RNA template": "病毒 RNA 模板",
+  "RNA-dependent RNA polymerase": "RNA 依賴型 RNA 聚合酶",
+  "Faithful viral RNA": "正確複製的病毒 RNA",
+  "Normal RNA synthesis": "正常 RNA 合成",
+  "Genome replication": "基因體複製",
+  "Viral polyprotein": "病毒多蛋白",
+  "Main protease": "主要蛋白酶",
+  "Processed proteins": "切割後的蛋白",
+  "Functional viral proteins": "具功能的病毒蛋白",
+  "Polymerase-inhibiting analogues": "抑制聚合酶的類似物",
+  "Mutagenic nucleoside analogues": "誘發突變的核苷類似物",
+  "Viral protease inhibitors": "病毒蛋白酶抑制劑",
+  "IMP": "次黃苷酸",
+  "IMPDH": "次黃苷酸去氫酶",
+  "Guanine nucleotides": "鳥嘌呤核苷酸",
+  "Lymphocyte proliferation": "淋巴球增生",
+  "Dihydroorotate": "二氫乳清酸",
+  "DHODH": "二氫乳清酸去氫酶",
+  "Pyrimidine nucleotides": "嘧啶核苷酸",
+  "Clonal expansion": "克隆增殖",
+  "IMPDH inhibitors": "次黃苷酸去氫酶抑制劑",
+  "DHODH inhibitors": "二氫乳清酸去氫酶抑制劑",
+  "Calcineurin": "鈣調神經磷酸酶",
+  "Dephosphorylation": "去磷酸化",
+  "NFAT activation": "活化 T 細胞核因子活化",
+  "IL-2 production": "介白素 2 生成",
+  "IL-2 receptor": "介白素 2 受體",
+  "T-cell functions": "T 細胞功能",
+  "Calcineurin inhibitors": "鈣調神經磷酸酶抑制劑",
+  "Different immunophilins; same enzyme": "結合不同免疫親和蛋白；抑制同一酵素",
+  "mTOR inhibitors": "mTOR 抑制劑",
+  "FKBP12; not calcineurin": "結合 FKBP12；不抑制鈣調神經磷酸酶",
+  "IL-2Rα blockers": "介白素 2 受體 α 鏈阻斷劑",
+  "IL-1": "介白素 1",
+  "IL-1 receptor": "介白素 1 受體",
+  "IL-6": "介白素 6",
+  "IL-6 receptor": "介白素 6 受體",
+  "IL-17A": "介白素 17A",
+  "IL-17 receptor": "介白素 17 受體",
+  "TNF-α": "腫瘤壞死因子 α",
+  "TNF receptor": "腫瘤壞死因子受體",
+  "Inflammatory signaling": "發炎訊號",
+  "TNF neutralizers": "腫瘤壞死因子中和藥",
+  "IL-1 neutralizers / traps": "介白素 1 中和／捕捉藥",
+  "IL-1 receptor antagonists": "介白素 1 受體拮抗劑",
+  "IL-6R blockers": "介白素 6 受體阻斷劑",
+  "IL-17A neutralizers": "介白素 17A 中和藥",
+  "CD3⁺ T cells": "CD3 陽性 T 細胞",
+  "CD20⁺ B cells": "CD20 陽性 B 細胞",
+  "CD52⁺ immune cells": "CD52 陽性免疫細胞",
+  "B-cell functions": "B 細胞功能",
+  "Multiple cell populations": "多種細胞族群",
+  "Anti-CD3 antibodies": "抗 CD3 抗體",
+  "Anti-CD20 antibodies": "抗 CD20 抗體",
+  "Anti-CD52 antibodies": "抗 CD52 抗體",
+  "B7 on APC": "抗原呈現細胞上的 B7",
+  "On T cell": "位於 T 細胞",
+  "On tumor / other cells": "位於腫瘤／其他細胞",
+  "Inhibitory receptor": "抑制性受體",
+  "T-cell activity": "T 細胞活性",
+  "CTLA-4–Ig fusion proteins": "CTLA-4–Ig 融合蛋白",
+  "Anti-CTLA-4 antibodies": "抗 CTLA-4 抗體",
+  "Anti-PD-1 antibodies": "抗 PD-1 抗體",
+  "Anti-PD-L1 antibodies": "抗 PD-L1 抗體",
+  "Leukocyte": "白血球",
+  "Leukocyte integrin": "白血球整合素",
+  "Endothelial ligand": "內皮細胞配體",
+  "Endothelial / tissue ligand": "內皮／組織配體",
+  "Adhesion / migration": "黏附／移行",
+  "Inflammatory recruitment": "發炎細胞招募",
+  "CNS trafficking": "移行至中樞神經系統",
+  "Anti-CD11a antibodies": "抗 CD11a 抗體",
+  "Anti-α4 integrin antibodies": "抗 α4 整合素抗體",
+  "C5 cleavage": "C5 裂解",
+  "MAC / membrane lysis": "膜攻擊複合體／細胞膜溶解",
+  "Anti-C5 antibodies": "抗 C5 抗體",
+  "Interferon receptors": "干擾素受體",
+  "Immune / antiviral responses": "免疫／抗病毒反應",
+  "Innate and adaptive": "先天與適應性免疫",
+  "CSF receptors": "群落刺激因子受體",
+  "Myeloid cell production": "骨髓系細胞生成",
+  "T / NK-cell expansion": "T／自然殺手細胞增殖",
+  "Interferons": "干擾素",
+  "Colony-stimulating factors": "群落刺激因子",
+  "IL-2 agonists": "介白素 2 致效劑",
+  "Diffusion": "擴散",
+  "Host protein": "宿主蛋白",
+  "HSP dissociation": "熱休克蛋白解離",
+  "Inflammatory gene program": "發炎相關基因表現",
+  "After transcription / translation": "經轉錄／轉譯",
+  "Lymphocyte functions": "淋巴球功能",
+  "Tissue-dependent": "依組織而異",
+  "Gq / PLC": "Gq／磷脂酶 C",
+  "Gs / cAMP": "Gs／環腺苷酸",
+  "Gi": "抑制型 G 蛋白",
+  "Gq / Ca²⁺ ↑": "Gq／細胞內鈣離子增加",
+  "Ca²⁺ / calmodulin": "鈣離子／鈣調蛋白",
+  "cGMP / PKG": "環鳥苷酸／蛋白激酶 G",
+  "ENaC / Na⁺-K⁺ pump": "上皮鈉通道／鈉鉀幫浦",
+  "11β-HSD2": "11β-羥類固醇去氫酶第二型",
+  "GRE / NF-κB interactions": "糖皮質素反應元件／核因子 κB 交互作用",
+  "NF-κB / AP-1 modulation": "調節核因子 κB／活化蛋白 1",
+  "Multiple reactions": "多步反應",
+  "Multiple reactive targets": "多個反應性標的",
+  "Pyrimidine nucleotide pool": "嘧啶核苷酸總量",
+  "Uracil derivatives": "尿嘧啶衍生物",
+  "dTMP supply": "去氧胸苷酸供應",
+  "RNA function": "RNA 功能",
+  "Viral protein": "病毒蛋白",
+  "gp41-mediated fusion": "gp41 媒介的融合",
+  "30S + 50S": "30S 與 50S 次單元",
+  "CD25 = IL-2Rα": "CD25 即介白素 2 受體 α 鏈",
+  "mTORC1": "mTOR 複合體一",
+  "RdRp": "RNA 依賴型 RNA 聚合酶",
+  "Mpro / 3CLpro": "主要／3C 樣蛋白酶",
+  "α4 integrin": "α4 整合素",
+  "LFA-1 / CD11a": "淋巴球功能相關抗原／CD11a",
+  "COX-1": "環氧合酶第一型",
+  "COX-2": "環氧合酶第二型",
+  "Nonselective NSAIDs": "非選擇性非類固醇抗發炎藥",
+  "Irreversible COX inhibitors": "不可逆環氧合酶抑制劑",
+  "COX-2 inhibitors": "環氧合酶第二型抑制劑",
+  "Analgesics / antipyretics": "止痛／退燒藥",
+  "Reversible inhibition": "可逆抑制",
+  "Irreversible acetylation": "不可逆乙醯化",
+  "Preferential COX-2 inhibition": "優先抑制環氧合酶第二型",
+  "Platelet aggregation": "血小板聚集",
+  "Prostaglandins": "前列腺素",
+  "Pain / fever / inflammation": "疼痛／發燒／發炎",
+  "Vasodilation / anti-aggregation": "血管擴張／抑制血小板聚集",
+  "Acetaminophen": "乙醯胺酚",
+  "Glucuronidation / sulfation": "葡萄糖醛酸化／硫酸化",
+  "Major pathways": "主要代謝路徑",
+  "Excretion": "排泄",
+  "CYP oxidation": "細胞色素 P450 氧化",
+  "Minor pathway": "次要代謝路徑",
+  "Glutathione": "穀胱甘肽",
+  "Detoxification": "解毒",
+  "N-acetylcysteine": "乙醯半胱胺酸",
+  "NAC": "乙醯半胱胺酸",
+  "Overdose": "過量",
+  "GSH depletion": "穀胱甘肽耗竭"
+};
+const models=[{"slug": "08-01-Microtubules", "title": "Helminths: microtubules and nutrient uptake", "nodes": [{"id": "tb", "x": 130, "y": 270, "t": "Parasite β-tubulin", "sub": "", "w": 230}, {"id": "mt", "x": 470, "y": 270, "t": "Microtubule assembly", "sub": "", "w": 260}, {"id": "uptake", "x": 830, "y": 270, "t": "Nutrient uptake / survival", "sub": "", "w": 290}], "edges": [{"a": "tb", "b": "mt", "p": "M255 264H330", "via": "", "feedback": false}, {"a": "mt", "b": "uptake", "p": "M610 264H675", "via": "", "feedback": false}], "options": [{"name": "Normal physiology", "targets": [], "kind": "normal", "dim": false, "sub": "", "pos": []}, {"name": "Benzimidazoles", "targets": ["tb"], "kind": "inhibit", "dim": true, "sub": "", "pos": [[130, 135]], "effect": "β-tubulin binding → microtubule polymerization ↓ → glucose uptake / energy supply ↓", "members": ["Mebendazole", "Albendazole"]}], "h": 530, "decor": ""}];
+let showChinese=false;
+const NS='http://www.w3.org/2000/svg';
+const S=(tag,attrs={},text)=>{const e=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e};
+const colors={line:'#678196',inhibit:'#a74658',promote:'#277965'};
+const padding=4, gap=5;
+const button=document.createElement('button');button.type='button';button.className='zh-toggle';button.textContent='顯示中文對照';button.setAttribute('aria-pressed','false');document.querySelector('h1').after(button);
+function lineWrap(text,maxChars){if(text.length<=maxChars)return[text];const words=text.includes(' ')?text.split(' '):[...text];let lines=[],s='';for(const word of words){const next=s+(s&&text.includes(' ')?' ':'')+word;if(next.length>maxChars&&s){lines.push(s);s=word}else s=next;}if(s)lines.push(s);return lines;}
+function label(svg,x,y,title,sub,kind,id){
+ const g=S('g',{'data-label':id,'data-kind':kind});const width=kind==='drug'?250:270;let offset=0;
+ function text(t,font,color,cls,max){const rows=lineWrap(t,max);for(const row of rows){g.append(S('text',{x,y:y+offset,'text-anchor':'middle','font-size':font,fill:color,class:cls},row));offset+=font+4;}}
+ text(title,17,kind==='drug'?'#506e84':'#263445',kind==='drug'?'drug-name':'en',kind==='drug'?29:34);
+ const z=terms[title];if(z){text(z,13,'#617286','zh',24);}else offset+=15;
+ if(sub){offset+=4;text(sub,12,'#53677c','en sub',40);if(terms[sub])text(terms[sub],12.5,'#617286','zh sub',27);else offset+=14.5;}
+ svg.append(g);const titleBox=g.querySelector('text').getBBox();const b=g.getBBox();return{id,x,y,g,titleBox:{l:titleBox.x,r:titleBox.x+titleBox.width},box:{l:b.x-padding,r:b.x+b.width+padding,t:b.y-padding,b:b.y+b.height+padding}};
 }
-button.onclick=()=>{enabled=!enabled;window.__showChinese=enabled;button.setAttribute('aria-pressed',enabled);button.textContent=enabled?'隱藏中文對照':'顯示中文對照';document.querySelectorAll('section').forEach(sec=>sec.querySelector('nav button[aria-pressed="true"]')?.click());apply();};
-new MutationObserver(()=>{if(pending)return;pending=true;queueMicrotask(()=>{pending=false;apply();});}).observe(document.querySelector('main'),{childList:true,subtree:true});apply();
-})();</script></html>
+function overlap(a,b,p=0){return a.l<b.r+p&&a.r>b.l-p&&a.t<b.b+p&&a.b>b.t-p;}
+function shift(label,dx,dy){label.x+=dx;label.y+=dy;for(const t of label.g.querySelectorAll('text')){t.setAttribute('x',Number(t.getAttribute('x'))+dx);t.setAttribute('y',Number(t.getAttribute('y'))+dy);}label.titleBox.l+=dx;label.titleBox.r+=dx;label.box={l:label.box.l+dx,r:label.box.r+dx,t:label.box.t+dy,b:label.box.b+dy};}
+function port(label,side){const b=label.box;return side==='left'?[label.titleBox.l-gap,label.y-6]:side==='right'?[label.titleBox.r+gap,label.y-6]:side==='top'?[label.x,b.t-gap]:[label.x,b.b+gap];}
+function hit(a,b,box){if(Math.abs(a[0]-b[0])<.1)return a[0]>box.l&&a[0]<box.r&&Math.max(a[1],b[1])>box.t&&Math.min(a[1],b[1])<box.b;if(Math.abs(a[1]-b[1])<.1)return a[1]>box.t&&a[1]<box.b&&Math.max(a[0],b[0])>box.l&&Math.min(a[0],b[0])<box.r;return true;}
+function clean(points){const p=points.filter((x,i)=>!i||x[0]!==points[i-1][0]||x[1]!==points[i-1][1]);for(let i=p.length-2;i>0;i--)if((p[i-1][0]===p[i][0]&&p[i][0]===p[i+1][0])||(p[i-1][1]===p[i][1]&&p[i][1]===p[i+1][1]))p.splice(i,1);return p;}
+function route(a,b,obstacles,preferred){
+ let candidates=[];const mx=preferred??(a[0]+b[0])/2,my=(a[1]+b[1])/2;
+ candidates.push([a,[mx,a[1]],[mx,b[1]],b],[a,[a[0],my],[b[0],my],b],[a,[b[0],a[1]],b],[a,[a[0],b[1]],b]);
+ const xs=[...new Set(obstacles.flatMap(o=>[o.l-10,o.r+10]).concat([a[0],b[0],mx]))],ys=[...new Set(obstacles.flatMap(o=>[o.t-10,o.b+10]).concat([a[1],b[1],my]))];
+ for(const x of xs)candidates.push([a,[x,a[1]],[x,b[1]],b]);for(const y of ys)candidates.push([a,[a[0],y],[b[0],y],b]);
+ function valid(p){return p.slice(1).every((b,i)=>!obstacles.some(o=>hit(p[i],b,o)));}
+ function cost(p){return p.slice(1).reduce((s,b,i)=>s+Math.abs(b[0]-p[i][0])+Math.abs(b[1]-p[i][1]),0)+p.length*12;}
+ const good=candidates.map(clean).filter(valid).sort((x,y)=>cost(x)-cost(y));if(good.length)return good[0];
+ // Rectilinear visibility graph; every vertex is outside the measured label bounds.
+ const xx=xs.sort((x,y)=>x-y),yy=ys.sort((x,y)=>x-y),key=(i,j)=>i*yy.length+j,dist=new Map(),prev=new Map(),open=[];
+ const si=xx.indexOf(a[0]),sj=yy.indexOf(a[1]),ei=xx.indexOf(b[0]),ej=yy.indexOf(b[1]),start=key(si,sj),end=key(ei,ej);dist.set(start,0);open.push(start);
+ while(open.length){open.sort((x,y)=>dist.get(x)-dist.get(y));const cur=open.shift();if(cur===end)break;const i=Math.floor(cur/yy.length),j=cur%yy.length;
+  for(const[ni,nj]of[[i-1,j],[i+1,j],[i,j-1],[i,j+1]]){if(ni<0||nj<0||ni>=xx.length||nj>=yy.length)continue;const aa=[xx[i],yy[j]],bb=[xx[ni],yy[nj]];if(obstacles.some(o=>hit(aa,bb,o)))continue;const next=key(ni,nj),nd=dist.get(cur)+Math.abs(aa[0]-bb[0])+Math.abs(aa[1]-bb[1])+2;if(nd<(dist.get(next)??Infinity)){dist.set(next,nd);prev.set(next,cur);if(!open.includes(next))open.push(next);}}
+ }
+ if(dist.has(end)){let out=[],cur=end;for(;;){out.push([xx[Math.floor(cur/yy.length)],yy[cur%yy.length]]);if(cur===start)break;cur=prev.get(cur);}return clean(out.reverse());}
+ throw Error('No clear route between '+a+' and '+b);
+}
+function connect(a,sa,b,sb,obstacles){
+ const start=port(a,sa),end=port(b,sb),v={left:[-1,0],right:[1,0],top:[0,-1],bottom:[0,1]},length=6;
+ const out=[start[0]+v[sa][0]*length,start[1]+v[sa][1]*length],into=[end[0]+v[sb][0]*length,end[1]+v[sb][1]*length];
+ return clean([start,...route(out,into,obstacles),end]);
+}
+function drawPath(layer,points,kind,dim,meta){const p=clean(points),d=p.map((v,i)=>(i?'L':'M')+v.join(' ')).join(' ');const group=S('g',{'data-connection':meta,class:dim?'dimmed':''});group.append(S('path',{d,fill:'none',stroke:colors[kind],'stroke-width':1.8,'vector-effect':'non-scaling-stroke','data-route':JSON.stringify(p)}));
+ const end=p.at(-1),before=p.at(-2);let dx=end[0]-before[0],dy=end[1]-before[1],length=Math.hypot(dx,dy);if(length){dx/=length;dy/=length;if(kind==='inhibit')group.append(S('path',{d:`M${end[0]-dy*6} ${end[1]+dx*6}L${end[0]+dy*6} ${end[1]-dx*6}`,fill:'none',stroke:colors[kind],'stroke-width':2,'vector-effect':'non-scaling-stroke','data-terminal':'inhibit'}));else group.append(S('path',{d:`M${end}L${end[0]-dx*8-dy*3.5} ${end[1]-dy*8+dx*3.5}L${end[0]-dx*8+dy*3.5} ${end[1]-dy*8-dx*3.5}Z`,fill:colors[kind],'data-terminal':kind==='promote'?'promote':'normal'}));}layer.append(group);}
+function prepareModel(m){const nodes=m.nodes.map(n=>({...n}));
+ // Place enzyme annotations beside the reaction; the substrate stays on its own rail.
+ if(m.slug==='05-02-Ergosterol'){nodes.find(n=>n.id==='epo').x=650;}
+ return nodes;
+}
+function build(m,o,frame){
+ const topic=m;if(o.model)m={...m,...o.model};
+ const panel=frame.closest('section'),wasHidden=panel.hidden;if(wasHidden)panel.hidden=false;
+ const svg=S('svg',{class:'map stable-map',viewBox:'0 0 1000 800',role:'img','aria-label':m.title+' — '+o.name});frame.replaceChildren(svg);const labels=[],nodeMap={},dn=new Set(),de=new Set();
+ if(o.dim){let q=[...o.targets],seen=new Set(q);while(q.length){const id=q.shift();m.edges.forEach((e,i)=>{if(!e.feedback&&(e.a===id||e.via===id)){de.add(i);if(!o.targets.includes(e.b))dn.add(e.b);if(!seen.has(e.b)){seen.add(e.b);q.push(e.b);}}});}}
+ const nodes=prepareModel(m);
+ for(const n of nodes){if(n.drugOnly&&(o.kind==='normal'||(m.slug==='02-05-Nucleic-acids'&&!o.targets.includes('red'))))continue;const sub=m.slug==='02-05-Nucleic-acids'&&n.id==='damage'&&o.originalName==='Metronidazole'?'DNA damage':n.sub;const l=label(svg,n.x,n.y,n.t,sub,'node',n.id);if(dn.has(n.id))l.g.classList.add('dimmed');labels.push(l);nodeMap[n.id]=l;}
+ // Stable node boxes are measured with both languages, even while Chinese is hidden.
+ for(let pass=0;pass<20;pass++){let changed=false;for(let i=0;i<labels.length;i++)for(let j=i+1;j<labels.length;j++){if(overlap(labels[i].box,labels[j].box,4)){let a=labels[i],b=labels[j];if(a.y>b.y)[a,b]=[b,a];shift(b,0,a.box.b+12-b.box.t);changed=true;}}if(!changed)break;}
+ const drugs=[],shared=o.targets.length>1&&(o.targets.every(id=>nodeMap[id]?.y===nodeMap[o.targets[0]]?.y)||o.pos?.length===o.targets.length&&o.pos.every(p=>p[0]===o.pos[0][0]&&p[1]===o.pos[0][1]));let sharedLabel=null;o.targets.forEach((id,i)=>{const target=nodeMap[id];if(!target)return;if(sharedLabel){drugs.push({l:sharedLabel,target,id});return;}const pos=o.pos?.[i]||[target.x,target.y-110];let x=pos[0],y=pos[1];if(shared&&o.targets.every(id=>nodeMap[id]?.y===target.y)){x=o.targets.reduce((s,id)=>s+nodeMap[id].x,0)/o.targets.length;}if(m.slug==='01-02-Serotonin'){x=650;y=target.y-85;}if(m.slug==='05-02-Ergosterol'&&id==='epo'){x=650;y=target.y-115;}
+ const l=label(svg,x,y,o.name,o.sub,'drug','drug-'+i);const candidates=[[x,y],[x,target.box.t-32-(l.box.b-l.y)],[target.x,target.box.b+32-(l.box.t-l.y)],[target.x+240,target.y-65],[target.x-240,target.y-65],[x,y-80],[x,y+80]];let chosen=false;
+ for(const[cx,cy]of candidates){const b={l:l.box.l+cx-l.x,r:l.box.r+cx-l.x,t:l.box.t+cy-l.y,b:l.box.b+cy-l.y};const nearX=b.l<target.box.r&&b.r>target.box.l;const safeTarget=cy<target.y?target.box.t-b.b>=26:b.t-target.box.b>=26;if(safeTarget&&!labels.some(n=>overlap(b,n.box,15))){shift(l,cx-l.x,cy-l.y);chosen=true;break;}}
+ if(!chosen){let y=Math.min(...labels.map(n=>n.box.t))-70;shift(l,0,y-l.y);}
+ labels.push(l);if(shared)sharedLabel=l;drugs.push({l,target,id});});
+ const layer=S('g',{'data-lines':'true'});svg.prepend(layer);const obstacles=labels.flatMap(l=>[...l.g.querySelectorAll('text')].map(t=>{const b=t.getBBox();return{l:b.x-3,r:b.x+b.width+3,t:b.y-3,b:b.y+b.height+3}}));
+ for(const[e,i]of m.edges.map((e,i)=>[e,i])){if(e.drugOnly&&(o.kind==='normal'||(m.slug==='02-05-Nucleic-acids'&&!o.targets.includes('red'))))continue;const a=nodeMap[e.a],b=nodeMap[e.b];if(!a||!b)continue;let sideA,sideB;
+ if(e.feedback&&e.p&&/H/.test(e.p)&&b.y<a.y-40){sideA='left';sideB='left';}else if(Math.abs(a.x-b.x)<80){sideA=b.y>a.y?'bottom':'top';sideB=b.y>a.y?'top':'bottom';}else{sideA=b.x>a.x?'right':'left';sideB=b.x>a.x?'left':'right';}
+ const start=port(a,sideA),end=port(b,sideB);let points;if(e.feedback&&e.p&&/H/.test(e.p)&&b.y<a.y-40){const rail=Math.min(...labels.map(l=>l.box.l))-45-i*12;points=route(start,[rail,start[1]],obstacles).concat(route([rail,start[1]],[rail,end[1]],obstacles).slice(1),route([rail,end[1]],end,obstacles).slice(1));}else points=connect(a,sideA,b,sideB,obstacles);
+ drawPath(layer,points,e.kind||(e.feedback?'inhibit':'line'),de.has(i),e.a+'>'+e.b);}
+ for(const{l,target,id}of drugs){const above=l.y<target.y;const start=port(l,above?'bottom':'top'),end=port(target,above?'top':'bottom');drawPath(layer,connect(l,above?'bottom':'top',target,above?'top':'bottom',obstacles),o.kind,false,'drug>'+id);}
+ if(m.slug==='04-01-HPA'&&o.kind==='promote'){
+ const target=nodeMap.gr||nodes.map(n=>nodeMap[n.id]).find(l=>l&&l.g.textContent.includes('Intracellular GR'));
+ if(target)for(const id of ['crh','acth']){const b=nodeMap[id];if(b){const rail=Math.max(...labels.map(l=>l.box.r))+60+(id==='hyp'?25:0),a=port(target,'right'),end=port(b,'right');const ps=route(a,[rail,a[1]],obstacles).concat(route([rail,a[1]],[rail,end[1]],obstacles).slice(1),route([rail,end[1]],end,obstacles).slice(1));drawPath(layer,ps,'inhibit',false,'external-feedback>'+id);}}
+ }
+ // Keep source diagram annotations in the same canvas and include them in bounds.
+ if(m.decor){const g=S('g',{'data-decor':'true'});g.innerHTML=m.decor;g.querySelectorAll('text').forEach(t=>{if(m.slug==='02-01-Cell-wall'&&t.textContent==='CYTOPLASM')t.setAttribute('y','286');t.setAttribute('fill','#73818c');t.setAttribute('font-size',12);});svg.append(g);}
+ // Diagram size depends on all possible drug states, cached per topic, not on the current tab.
+ const bbox=svg.getBBox();const bounds={l:Math.min(0,bbox.x-28),t:Math.min(0,bbox.y-28),r:Math.max(1000,bbox.x+bbox.width+28),b:Math.max(m.h,bbox.y+bbox.height+28)};
+ const cache=topic.__stableBounds??(topic.__stableBounds={...bounds});for(const k of ['l','t'])cache[k]=Math.min(cache[k],bounds[k]);for(const k of ['r','b'])cache[k]=Math.max(cache[k],bounds[k]);
+ svg.setAttribute('viewBox',`${cache.l} ${cache.t} ${cache.r-cache.l} ${cache.b-cache.t}`);svg.style.aspectRatio=`${cache.r-cache.l}/${cache.b-cache.t}`;
+ svg.dataset.polished='true';svg.dataset.layout='bilingual-independent';svg.classList.toggle('show-zh',showChinese);
+ if(wasHidden)panel.hidden=true;return svg;
+}
+function update(sec,m,index){sec.dataset.option=index;const frame=sec.querySelector('.frame');try{build(m,m.options[index],frame);}catch(e){console.error('Diagram layout',m.slug,index,e);throw e;}}
+// Two independent drawings: original English SVG versus fully laid-out bilingual SVG.
+const sections=[];
+for(const m of models){let sec=document.getElementById(m.slug);if(!sec&&m.slug==='03-01-COX'){const main=document.querySelector('main');sec=document.createElement('section');sec.id=m.slug;[...main.children].filter(e=>['NAV','DIV'].includes(e.tagName)).forEach(e=>sec.append(e));main.append(sec);}if(!sec)continue;const buttons=[...sec.querySelectorAll(':scope > nav button')];sections.push({m,sec,buttons});buttons.forEach((b,i)=>b.addEventListener('click',()=>{if(showChinese)update(sec,m,i);}));}
+button.textContent='切換中英對照版';
+button.onclick=()=>{showChinese=!showChinese;button.setAttribute('aria-pressed',String(showChinese));button.textContent=showChinese?'回到英文版':'切換中英對照版';
+for(const {m,sec,buttons} of sections){const i=Math.max(0,buttons.findIndex(b=>b.getAttribute('aria-pressed')==='true'));
+if(showChinese){if(!m.__dualPrepared){for(let j=0;j<m.options.length;j++)build(m,m.options[j],sec.querySelector('.frame'));m.__dualPrepared=true;}update(sec,m,i);}else buttons[i]?.click();}
+};
+})();
+</script><script data-drug-background>(()=>{
+const ns='http://www.w3.org/2000/svg';let queued=false;
+function paint(){queued=false;document.querySelectorAll('svg.map').forEach(svg=>{
+ if(!svg.getBoundingClientRect().width)return;
+ const dual=svg.classList.contains('stable-map');
+ const labels=dual?[...svg.querySelectorAll('[data-kind="drug"]')]:[...svg.querySelectorAll('text.drug-name')];
+ labels.forEach(label=>{
+ const texts=dual?[...label.querySelectorAll('text:not(.sub)')]:[label];if(!texts.length)return;
+ const boxes=texts.map(t=>t.getBBox());const l=Math.min(...boxes.map(b=>b.x)),r=Math.max(...boxes.map(b=>b.x+b.width)),top=Math.min(...boxes.map(b=>b.y)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
+ let rect=dual?label.querySelector('rect.drug-label-bg'):label.previousElementSibling?.classList.contains('drug-label-bg')?label.previousElementSibling:null;
+ if(!rect){rect=document.createElementNS(ns,'rect');rect.setAttribute('class','drug-label-bg');rect.setAttribute('aria-hidden','true');(dual?label:label.parentNode).insertBefore(rect,dual?label.firstChild:label);}
+ const pad=dual?7:7/(Math.min(svg.getBoundingClientRect().width/svg.viewBox.baseVal.width,svg.getBoundingClientRect().height/svg.viewBox.baseVal.height)||1);
+ for(const[k,v]of Object.entries({x:l-pad,y:top-4,width:r-l+pad*2,height:bottom-top+8,rx:4,fill:'#e6edf1'}))if(rect.getAttribute(k)!==String(v))rect.setAttribute(k,v);
+ });
+ });}
+function schedule(){if(!queued){queued=true;requestAnimationFrame(paint);}}
+new MutationObserver(schedule).observe(document.querySelector('main'),{childList:true,subtree:true});window.addEventListener('resize',schedule);schedule();
+})();
+</script><style data-fit-bilingual>.frame:has(.stable-map){width:100%;min-width:0;overflow-x:hidden!important}.stable-map{max-width:100%}.stable-map .zh{fill:#617286}@media(max-width:600px){main{padding-left:12px;padding-right:12px}}</style></html>
