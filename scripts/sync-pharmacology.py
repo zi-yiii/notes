@@ -42,3 +42,7 @@ write(Path('pathology/115-1/index.html'),page('Pathology · 115-1',body,link('..
 body=row('Pathology · 病理','115-1 · 切片複習','pathology/')+row('Pharmacology · 藥理','115-1 · Block 2','pharmacology/')+row('Clinical medicine · 臨床醫學','')+row('Laboratory medicine · 檢驗醫學','')+row('Master tables · 總表','跨科整合，之後補入')
 write(Path('index.html'),page('Study notes · 學習筆記',body))
 print('Published HTML prepared:',len(list((repo/'pharmacology/115-1/2').glob('*.html'))))
+
+# Reapply the approved canonical site hierarchy after syncing course HTML.
+import runpy
+runpy.run_path(str(repo/'scripts/build-navigation.py'),run_name='__main__')
