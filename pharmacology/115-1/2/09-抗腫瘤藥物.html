@@ -26,7 +26,7 @@
  }else{
   let nodes=a?a.nodes:t.nodes;for(let i=0;i<3;i++)n(155+i*340,265,nodes[i][0],nodes[i][1]);for(let i=0;i<2;i++){line(`M${285+i*340} 260h80`,a&&i>=a.target);enz(325+i*340,320,(a?a.steps:t.steps)[i],'');}target=[325+(a?a.target:0)*340,260];
  }
- if(a){let[x,y]=target,below=y>300,top=below?455:55;let cx=Math.max(180,Math.min(820,x));s+=`<rect x="${cx-170}" y="${top}" width="340" height="${zh?68:48}" rx="6" fill="#e0e9ec"/>`+text(cx,top+29,a.name,a.zh,'drug');let end=below?y+12:y-12,start=below?top-10:top+(zh?78:58),color=a.kind==='promote'?'#4d8674':'#b35064';s+=`<path d="M${x} ${start}V${end}" stroke="${color}" stroke-width="2.3" fill="none"/>`;s+=a.kind==='promote'?`<path d="M${x-6} ${end-7}L${x} ${end}L${x+6} ${end-7}" fill="none" stroke="${color}" stroke-width="2.3"/>`:`<path d="M${x-9} ${end}h18" stroke="${color}" stroke-width="2.3"/>`;}
+ if(a){let[x,y]=target,below=y>300,top=below?455:55;let cx=Math.max(180,Math.min(820,x));s+=`<rect x="${cx-170}" y="${top}" width="340" height="${zh?68:48}" rx="6" fill="#e0e9ec"/>`+text(cx,top+29,a.name,a.zh,'drug');let end=below?y+12:y-12,start=below?top-10:top+(zh?78:58),color=a.kind==='promote'?'#4d8674':'#b35064';s+=`<path d="M${x} ${start}V${end}" stroke="${color}" stroke-width="2.3" fill="none"/>`;s+=a.kind==='promote'?`<path d="M${x-6} ${below?end+7:end-7}L${x} ${end}L${x+6} ${below?end+7:end-7}" fill="none" stroke="${color}" stroke-width="2.3"/>`:`<path d="M${x-9} ${end}h18" stroke="${color}" stroke-width="2.3"/>`;}
  return s;
 }
 
