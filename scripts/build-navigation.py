@@ -13,7 +13,7 @@ def page(p,title,body,crumbs,desc='',subject=''):
  write(p,f'<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}｜學習筆記</title><style>{CSS}</style><body style="--accent:{accent}"><header><div><nav aria-label="位置">{nav}</nav><h1>{escape(title)}</h1><p>{escape(desc)}</p></div></header><main>{body}</main></body></html>')
 def alias(p,target):
  write(p,'<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>學習筆記</title><p><a href="'+target+'">前往新版入口</a></p><script>location.replace('+json.dumps(target)+'+location.search+location.hash)</script></html>')
-page('index.html','學習筆記',row('病理 Pathology','正課與實驗','pathology/')+row('藥理 Pharmacology','機轉、藥物比較與複習','pharmacology/'),[],desc='選擇科目，進入本學期的學習內容。')
+page('index.html','學習筆記',row('病理 Pathology','','pathology/')+row('藥理 Pharmacology','','pharmacology/'),[],desc='選擇科目，進入本學期的學習內容。')
 page('pathology/index.html','病理',row('正課','課程學習與複習測驗','lecture/')+row('實驗','切片導讀與認片練習','lab/'),[('筆記首頁','../')],subject='pathology')
 for kind,label,desc in [('lecture','正課','整合課程'),('lab','實驗','病理切片')]:
  page(f'pathology/{kind}/index.html','病理・'+label,row('115-1',desc,'115-1/'),[('筆記首頁','../../'),('病理','../')],subject='pathology')

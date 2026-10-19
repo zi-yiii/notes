@@ -29,7 +29,7 @@ for src in args.source.glob('*.html'):
  if '<nav class="site-nav">' not in text:text=text.replace('</style>','</style><nav class="site-nav">'+nav+'</nav>',1)
  write(Path('pharmacology/115-1/2')/src.name,text)
  redirect(Path('pharmacology/2')/src.name,'../115-1/2/'+src.name)
-body=''.join(row(t,'',name+'.html','Mechanisms · 機轉')[:-6]+'<span class="links">'+link(name+'-藥物速查.html','Drug reference · 藥物速查')+'</span></div>' for t,name in units)
+body=''.join(row(t,'',name+'.html','機轉')[:-6]+'<span class="links">'+link(name+'-藥物速查.html','藥物速查')+'</span></div>' for t,name in units)
 write(Path('pharmacology/115-1/2/index.html'),page('Pharmacology · Block 2',body,nav,'pharmacology'))
 redirect(Path('pharmacology/2/index.html'),'../115-1/2/')
 write(Path('pharmacology/115-1/1/index.html'),page('Pharmacology · Block 1',row('Reserved · 預留','之後補入本單元內容。'),link('../../../','Notes')+link('../../','Pharmacology')+link('../','115-1'),'pharmacology'))
@@ -46,3 +46,8 @@ print('Published HTML prepared:',len(list((repo/'pharmacology/115-1/2').glob('*.
 # Reapply the approved canonical site hierarchy after syncing course HTML.
 import runpy
 runpy.run_path(str(repo/'scripts/build-navigation.py'),run_name='__main__')
+
+# Shared columns for the pharmacology unit index.
+f=repo/'pharmacology/115-1/2/index.html'
+s=f.read_text().replace('</style>', '.row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(130px,.75fr) minmax(160px,.9fr);align-items:center;gap:24px}.row>div{min-width:0}.row h3{overflow-wrap:anywhere}.row>.links{display:block}.row>a,.row>.links>a{display:inline-flex;align-items:center;min-height:44px}@media(max-width:650px){.row{grid-template-columns:1fr 1fr;gap:8px 18px}.row>div{grid-column:1/-1}.row>a,.row>.links{align-self:start}}@media(min-width:651px){.row{flex-direction:initial}}</style>',1)
+f.write_text(s)
