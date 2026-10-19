@@ -15,7 +15,7 @@ def row(title,desc,url=None,label='Open · 開啟'):
  return '<div class="row"><div><h3>'+title+'</h3><p>'+desc+'</p></div>'+(link(url,label) if url else '<span class="pending">Reserved · 預留</span>')+'</div>'
 def redirect(path,target):
  write(path,'<!doctype html><meta charset="utf-8"><title>Moved</title><a href="'+target+'">Open updated page</a><script>location.replace('+repr(target)+'+location.search+location.hash)</script>')
-units=[('Autacoids · 自泌素','01-自泌素'),('Antibiotics · 抗生素','02-抗生素'),('NSAIDs & gout · 非類固醇抗炎與痛風','03-NSAIDs與痛風'),('Adrenal corticosteroids · 腎上腺類固醇','04-腎上腺類固醇'),('Antifungal agents · 抗黴菌藥','05-抗黴菌藥'),('Antiviral agents · 抗病毒藥','06-抗病毒藥'),('Immunotherapy · 免疫療法','07-免疫療法'),('Antiparasitic agents · 抗寄生蟲藥物','08-抗寄生蟲藥物')]
+units=[('Autacoids · 自泌素','01-自泌素'),('Antibiotics · 抗生素','02-抗生素'),('NSAIDs & gout · 非類固醇抗炎與痛風','03-NSAIDs與痛風'),('Adrenal corticosteroids · 腎上腺類固醇','04-腎上腺類固醇'),('Antifungal agents · 抗黴菌藥','05-抗黴菌藥'),('Antiviral agents · 抗病毒藥','06-抗病毒藥'),('Immunotherapy · 免疫療法','07-免疫療法'),('Antiparasitic agents · 抗寄生蟲藥物','08-抗寄生蟲藥物'),('Anticancer agents · 抗腫瘤藥物','09-抗腫瘤藥物')]
 nav=link('../../../','Notes')+link('../../','Pharmacology')+link('../','115-1')+link('./','Block 2')
 navcss='.site-nav{display:flex;gap:20px;flex-wrap:wrap;padding:12px 24px;border-bottom:1px solid #dde4e9;font:13px/1.6 Helvetica,Arial,sans-serif}.site-nav a{color:#506e84;text-decoration:none}.embed .site-nav{display:none}'
 for src in args.source.glob('*.html'):
