@@ -15,14 +15,14 @@ def alias(p,target):
  write(p,'<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>學習筆記</title><p><a href="'+target+'">前往新版入口</a></p><script>location.replace('+json.dumps(target)+'+location.search+location.hash)</script></html>')
 page('index.html','學習筆記',row('病理 Pathology','','pathology/')+row('藥理 Pharmacology','','pharmacology/'),[],desc='選擇科目，進入本學期的學習內容。')
 page('pathology/index.html','病理',row('正課','課程學習','lecture/')+row('實驗','切片導讀與認片練習','lab/'),[('筆記首頁','../')],subject='pathology')
-for kind,label,desc in [('lecture','正課','整合課程'),('lab','實驗','病理切片')]:
- page(f'pathology/{kind}/index.html','病理・'+label,row('115-1',desc,'115-1/'),[('筆記首頁','../../'),('病理','../')],subject='pathology')
+MICRO='https://zi-yiii.github.io/pathology/micro/115-1/'  # 病理切片主頁，網址固定
+for kind,label,desc,url in [('lecture','正課','整合課程','115-1/'),('lab','實驗','病理切片',MICRO)]:
+ page(f'pathology/{kind}/index.html','病理・'+label,row('115-1',desc,url),[('筆記首頁','../../'),('病理','../')],subject='pathology')
 page('pathology/lecture/115-1/index.html','病理正課・115-1',row('Block 1','尚未整理')+row('Block 2','感染系統與腫瘤學概論','2/'),[('筆記首頁','../../../'),('病理','../../'),('正課','../')],subject='pathology')
 page('pathology/lecture/115-1/2/index.html','病理正課・Block 2',row('感染性疾病總論','五個主題','00-Overview.html')+row('後續單元','待逐堂核對後加入'),[('筆記首頁','../../../../'),('病理','../../../'),('正課','../../'),('115-1','../')],subject='pathology')
-lab=''.join(row(f'第 {i} 次切片考試','切片導讀與認片練習',f'https://zi-yiii.github.io/pathology/micro/115-1/{i}/')for i in (1,2,3))
-page('pathology/lab/115-1/index.html','病理實驗・115-1',lab,[('筆記首頁','../../../'),('病理','../../'),('實驗','../')],desc='依切片考試次數分類。',subject='pathology')
+alias('pathology/lab/115-1/index.html',MICRO)
 # Existing bookmarked semester route remains useful, with an explicit choice.
-page('pathology/115-1/index.html','病理・115-1',row('正課','整合課程','../lecture/115-1/')+row('實驗','病理切片','../lab/115-1/'),[('筆記首頁','../../'),('病理','../')],subject='pathology')
+page('pathology/115-1/index.html','病理・115-1',row('正課','整合課程','../lecture/115-1/')+row('實驗','病理切片',MICRO),[('筆記首頁','../../'),('病理','../')],subject='pathology')
 page('pharmacology/index.html','藥理',row('115-1','機轉與藥物速查','115-1/'),[('筆記首頁','../')],subject='pharmacology')
 page('pharmacology/115-1/index.html','藥理・115-1',row('Block 1','預留內容')+row('Block 2','機轉與藥物速查','2/'),[('筆記首頁','../../'),('藥理','../')],subject='pharmacology')
 # Only the audited, source-free first lecture and its self-authored quiz are published.
